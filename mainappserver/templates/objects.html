@@ -1,0 +1,22 @@
+{% include 'sub/head.html' %}
+<body>
+    {% include 'sub/listHeader.html' %}
+    <div class="container-fluid">
+        <div class="text-center page-header container-fluid" style="font-family:Times; background-color: #eeeeff">
+            <h1>{{ type.typeName }}</h1>
+        </div>
+    </div>
+    <ul>
+        {% for object in objects %}
+        <div class="object">
+            <br>
+            <li>
+                <a href="{% url 'arc_object' object.id %}">
+                    {{ object.objName }}
+                </a>
+            </li>
+        </div>
+        {% endfor %}
+    </ul>
+</body>
+</html>

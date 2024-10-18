@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+{% include 'sub/head.html' %}
+<body>
+  {% include 'sub/indexHeader.html' %}
+
+  <ul>
+    {% for type in types %}
+      <div class="types">
+        <br>
+        <li>
+          <a href="{% url 'list_objects' type.tipe_id %}">
+            {{ type.typeName }}
+          </a>
+        </li>
+      </div>
+    {% endfor %}
+  </ul>
+</body>
+</html>
